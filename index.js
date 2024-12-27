@@ -2,7 +2,13 @@ const express = require("express");
 const app = express();
 const cors = require("cors");
 
-app.use(cors());
+const corsOptions = {
+  origin: 'http://localhost:5173', // Allow only the frontend app's URL
+  methods: ['GET', 'POST'], // Allowed HTTP methods (you can adjust if needed)
+  allowedHeaders: ['Content-Type', 'Authorization'], // Allowed headers
+};
+
+app.use(cors(corsOptions));
 app.use(express.json());
 
 const errorHandler = (err, req, res, next) => {
