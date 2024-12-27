@@ -32,12 +32,14 @@ A simple Express.js API server that handles company-related requests with custom
 ## Example Response
 
 When making a GET request to `/api/google`, you'll receive a response like:
+```
 {
   "success": true,
   "data": {
     "isSelected": true,
     "company": "google",
     "applicant": "Arbaz Ali",
-    "apllicantGoal": "google's perople is now like my family, aur apni family ke growth mein jee jaan lga denge"
+    "applicantGoal": "google's people is now like my family, aur apni family ke growth mein jee jaan lga denge"
   }
 }
+```
